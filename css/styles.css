@@ -1,0 +1,346 @@
+:root {
+  --primary-font: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+  --primary-white-color: #ffffff;
+  --secondary-white-color: #f4f4fd;
+  --primary-gray-color: #434455;
+  --secondary-gray-color: #2e2f42;
+  --primary-blue-color: #4d5ae5;
+  --primary-accent-color: #404bbf;
+  --active-link-color: #f44336;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-gray-color);
+  background-color: var(--primary-white-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list-wrap {
+  display: flex;
+  gap: 24px;
+}
+
+/* ================Стилі для HEADER==================== */
+
+.head-border {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.container  {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-wrap {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo {
+  color: var(--primary-blue-color);
+  font-family: var(--logo-font);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.17;
+  padding: 24px 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo-margin{
+  margin-right: 76px;
+  display: block;
+}
+
+.logo-second-color {
+  color: var(--secondary-gray-color);
+}
+
+
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  
+}
+
+.nav-link {
+  color: var(--secondary-gray-color);
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  padding: 24px 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.address-header {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.contacts {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.address-link {
+  color: inherit;
+  font-style: normal;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.address-link:hover,
+.address-link:focus {
+  color: var(--primary-accent-color);
+}
+
+.nav-link:active,
+.address-link:active {
+  color: var(--primary-accent-color);
+}
+
+/* ================/Стилі для HEADER==================== */
+
+/* ================Стилі для HERO==================== */
+
+.hero-section {
+  background-color: var(--secondary-gray-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+.hero-title {
+  color: var(--primary-white-color);
+  margin-bottom: 48px;
+  max-width: 496px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 1.12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  color: var(--primary-white-color);
+  background-color: var(--primary-blue-color);
+  display: block;
+  min-width: 169px;
+  font-weight: 500;
+  padding: 16px 32px;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--primary-accent-color);
+}
+
+/* ================/Стилі для HERO==================== */
+
+/* ================Стилі для ADVANTAGES==================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.item-advantages {
+  flex-basis: calc((100% - 3 * 24px) / 4)
+}
+.section {
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+/* ================/Стилі для ADVANTAGES==================== */
+
+/* ================Стилі для WHAT ARE YOU DOING==================== */
+.title-block {
+  color: var(--secondary-gray-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 72px;
+  line-height: 1.11;
+  letter-spacing: 0.045em;
+  text-transform: capitalize;
+}
+.wrap-doing {
+  padding-bottom: 120px;
+}
+
+.item-doing {
+  flex-basis: calc((100% - 3 * 16px) / 3);
+}
+/* ================/Стилі для WHAT ARE YOU DOING==================== */
+
+/* ================Стилі для TEAM==================== */
+
+.team {
+  background-color: var(--secondary-white-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.list-team {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  background-color: var(--primary-white-color);
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.inner {
+  padding: 32px 0;
+}
+
+/* ================/Стилі для TEAM==================== */
+
+/* ================Стилі для FOOTER==================== */
+
+.footer {
+  background-color: var(--secondary-gray-color);
+}
+
+.footer .logo-second-color {
+  color: var(--secondary-white-color);
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  color: var(--secondary-white-color);
+}
+
+.footer-wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/* ================/Стилі для FOOTER==================== */
+
+/* ===================Стилі для PORTFOLIO ===================*/
+.wrap-portfolio {
+  padding: 96px 0 120px 0;
+}
+
+.filter-button {
+  background-color: var(--secondary-white-color);
+  padding: 12px 24px;
+  color: var(--primary-blue-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter-list {
+  justify-content: center;
+  margin-bottom: 72px;
+}
+
+.list-title {
+  color: var(--secondary-gray-color);
+  font-size: 20px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.list-portfolio {
+  flex-wrap: wrap;
+  row-gap: 48px;
+  justify-content: center
+}
+
+.item-portfolio {  
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.img-portfolio {
+  max-width: 100%;
+}
+
+.inner-portfolio {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.list-text {
+  color: var(--primary-gray-color);
+  font-size: 16px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--primary-accent-color);
+  color: var(--primary-white-color);
+  border: 1px solid transparent
+}
+/* ===================/Стилі для PORTFOLIO ===================*/
