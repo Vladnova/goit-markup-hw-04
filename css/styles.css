@@ -58,25 +58,36 @@ ol {
 }
 
 .link-social {
-  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 0;
   fill: currentColor;
   color: var(--primary-white-color);
   background-color: var(--primary-blue-color);
-  padding: 12px;
   border-radius: 50%;
   transition: background-color var(--animation);
 }
 
 .link-social:hover,
 .link-social:focus {
-  background-color: var(--active-social-icon);
+  background-color: var(--primary-accent-color);
+}
+
+.icon-social {
+  fill: currentColor;
+  color: var(--secondary-white-color);
 }
 
 /* ================Стилі для HEADER==================== */
 
 .head-border {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -120,10 +131,8 @@ ol {
   gap: 40px;
 }
 
-.nav-item {
-  position: relative;
-}
 .nav-link {
+  position: relative;
   color: var(--secondary-gray-color);
   font-weight: 500;
   font-size: 16px;
@@ -142,6 +151,7 @@ ol {
   position: absolute;
   bottom: 0;
   left: 0;
+  bottom: -1px;
   content: '';
   display: block;
   width: 100%;
@@ -194,6 +204,8 @@ ol {
     ),
     url(../images/hero/hero-bg-img.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   max-width: 1440px;
 }
 .hero-title {
@@ -223,7 +235,7 @@ ol {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 250ms var(--animation);
+  transition: background-color var(--animation);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -256,6 +268,9 @@ ol {
 }
 
 .wrap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 24px 100px;
   margin-bottom: 8px;
   border-radius: 4px;
@@ -314,16 +329,21 @@ ol {
 /* ================/Стилі для TEAM==================== */
 
 /* ================Стилі для CUSTOMERS==================== */
-
+.item-customer {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
 .link-customer {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 0;
   fill: currentColor;
   color: var(--customers-icon-color);
   padding: 16px 32px;
   border-radius: 4px;
   border: 1px solid var(--customers-icon-color);
-  transition: border var(--animation), color var(--animation);
+  transition: border-color var(--animation), color var(--animation);
 }
 
 .link-customer:hover,
@@ -340,6 +360,21 @@ ol {
   background-color: var(--secondary-gray-color);
 }
 
+.footer-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.wrap-footer {
+  display: flex;
+  align-items: baseline;
+  /* gap: 120px; */
+}
+
+.wrap-logo-footer {
+  margin-right: 120px;
+}
+
 .footer .logo-second-color {
   color: var(--secondary-white-color);
 }
@@ -354,27 +389,97 @@ ol {
   max-width: 264px;
 }
 
+
 .social-title {
   color: var(--primary-white-color);
-  font-size: 16px;
   font-weight: 500;
   margin-bottom: 16px;
 }
 
-.footer-padding {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.wrap-footer {
-  display: flex;
-  gap: 120px;
-}
 .list-social-footer {
   display: flex;
   gap: 16px;
 }
+
+.icon-social {
+  fill: currentColor;
+  color: var(--secondary-white-color);
+}
 /* ================/Стилі для FOOTER==================== */
+
+
+/* ===================Стилі для BACKDROP ===================*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--animation), visibility var(--animation);
+}
+
+.is-hidden .modal {
+  transform: translateX(-50%) scale(0.7) rotate(0deg);
+}
+
+/* ===================/Стилі для BACKDROP ===================*/
+
+/* ===================Стилі для MODAL ===================*/
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);;
+  transition: transform var(--animation);
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  top: 24px;
+  right: 24px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  line-height: 0;
+  transition: background-color var(--animation), border var(--animation);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: var(--primary-accent-color);
+  border: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-btn-icon {
+  fill: var(--secondary-gray-color); 
+  transition: fill var(--animation);
+}
+.close-btn:hover .close-btn-icon, .close-btn:focus .close-btn-icon  {
+  fill: var(--primary-white-color);
+}
+/* ===================/Стилі для MODAL ===================*/
+
 
 /* ===================Стилі для PORTFOLIO ===================*/
 .wrap-portfolio {
@@ -429,8 +534,13 @@ ol {
   transition: box-shadow var(--animation);
 }
 
-.item-portfolio:hover,
-.item-portfolio:focus {
+
+.link {
+  display: block;
+}
+
+.link:hover,
+.link:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -439,6 +549,7 @@ ol {
 .link:hover .overlay,
 .link:focus .overlay {
   transform: translateY(0);
+  
 }
 
 .wrap-img {
@@ -474,75 +585,5 @@ ol {
   font-size: 16px;
 }
 
-
 /* ===================/Стилі для PORTFOLIO ===================*/
 
-/* ===================Стилі для BACKDROP ===================*/
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity var(--animation);
-}
-
-.is-hidden .modal {
-  transform: translateX(-50%) scale(0.7) rotate(0deg);
-}
-
-/* ===================/Стилі для BACKDROP ===================*/
-
-/* ===================Стилі для MODAL ===================*/
-.modal {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%) scale(1) rotate(360deg);
-  transition: transform var(--animation);
-  width: 408px;
-  height: 584px;
-  border-radius: 4px;
-  background-color: #fcfcfc;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-}
-
-.close-btn {
-  position: absolute;
-  cursor: pointer;
-  top: 24px;
-  right: 24px;
-  background-color: #e7e9fc;
-  border: 1px solid #d0d2e3;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  line-height: 0;
-  transition: background-color var(--animation), border var(--animation);
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  background-color: var(--primary-accent-color);
-  border: none;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.close-btn-icon {
-  fill: currentColor;
-  color: var(--secondary-gray-color);
-  transition: color var(--animation);
-}
-.close-btn:hover .close-btn-icon {
-  color: var(--primary-white-color);
-}
-/* ===================/Стилі для MODAL ===================*/
