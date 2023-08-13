@@ -133,7 +133,7 @@ ol {
 
 .nav-link {
   position: relative;
-  color: var(--secondary-gray-color);
+  transition: var(--secondary-gray-color);
   font-weight: 500;
   font-size: 16px;
   padding: 24px 0;
